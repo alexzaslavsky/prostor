@@ -1,0 +1,41 @@
+.right-animation {
+    opacity: 1;
+    animation: rightAnimation 1500ms forwards 0s ease-in;
+}
+
+.left-animation {
+    opacity: 1;
+    animation: leftAnimation 1500ms forwards 0s ease-in;
+}
+
+.bottom-animation {
+    opacity: 1;
+    animation: bottomAnimation 1500ms forwards 0s ease-in;
+}
+
+@keyframes rightAnimation{
+    0%{
+        transform: translateX(1000px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes leftAnimation{
+    0%{
+        transform: translateX(-1000px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes bottomAnimation{
+    0%{
+        transform: translateY(1000px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

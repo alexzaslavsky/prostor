@@ -1,0 +1,147 @@
+:root {
+    --white: #ffffff;
+    --grey: #f6f6f6;
+    --stuff-color: #4d4d4d;
+    --sub-stuff-color: #909090;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    background: #f84e7f;
+    /*background: url("../img/main-bg-2.jpg") no-repeat center;*/
+    /*background-size: cover;*/
+}
+
+.logo-wrapper {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 15px;
+    height: 15px;
+    margin: 10px;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.logo-wrapper .logo-name {
+    color: var(--white);
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+.logo-wrapper .logo-slogan {
+    color: var(--white);
+    font-size: 14px;
+}
+
+.main-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 50px;
+}
+
+.main-links a, .main-links p {
+    color: var(--white);
+    font-weight: bolder;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.hotline {
+    height: 80px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.hotline p {
+    margin: 3px 0;
+}
+
+.slogan-wrapper {
+    height: 631px;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px 0 60px;
+}
+
+.slogan-wrapper p {
+    text-align: left;
+    color: var(--white);
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 38px;
+}
+
+.face-glass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.vector-image img {*/
+    /*z-index: 0;*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 0;*/
+/*}*/
+
+.vector-image {
+    background: url("../img/vector-paint.png") no-repeat center;
+    background-size: contain;
+}
+
+.main button {
+    cursor: pointer;
+    width: 190px;
+    height: 50px;
+    border: 1px solid #db0070;
+    background: rgba(255, 255, 255, 1);
+    color: #db0070;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.main .transparent-button {
+    border: 1px solid #ffffff;
+    background: rgba(255, 255, 255, 0);
+    color: #ffffff;
+}
+
+.main .transparent-button:hover {
+    border: 1px solid #db0070;
+    background: rgba(255, 255, 255, 1);
+    color: #db0070;
+}
+
+
+
+
+
+
+
+
+

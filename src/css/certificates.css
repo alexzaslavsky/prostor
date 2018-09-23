@@ -1,0 +1,154 @@
+.certificates {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.certificates-header {
+    font-weight: bolder;
+    color: #000;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 100px 0 30px 0;
+}
+
+.certificates-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificates .bigger-certificate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 540px;
+    height: 440px;
+    margin: 15px 0 15px 0;
+
+}
+
+.certificates .smaller-certificate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 540px;
+    height: 240px;
+    margin: 15px 0 15px 0;
+
+}
+
+.green-border {
+    background: url("../img/green-cert.jpg") no-repeat center;
+    background-size: cover;
+    border: 10px solid #87c317;
+    opacity: 0;
+    transition: opacity ease-in-out 1500ms;
+}
+
+.pink-border {
+    background: url("../img/pink-cert.jpg") no-repeat center;
+    background-size: cover;
+    border: 10px solid #db0070;
+    opacity: 0;
+    transition: opacity ease-in-out 1500ms;
+}
+
+.turquoise-border {
+    background: url("../img/turquoise-cert.jpg") no-repeat center;
+    background-size: cover;
+    border: 10px solid #6eb6bb;
+    opacity: 0;
+    transition: opacity ease-in-out 1500ms;
+}
+
+.violet-border {
+    background: url("../img/violet-cert.jpg") no-repeat center;
+    background-size: cover;
+    border: 10px solid #9829d6;
+    opacity: 0;
+    transition: opacity ease-in-out 1500ms;
+}
+
+.certificates-container {
+    margin-bottom: 69px;
+}
+
+.transparent-block {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    font-weight: bolder;
+}
+
+.transparent-block a {
+    color: #db0070;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 10px 0 0 0;
+    position: relative;
+    padding: 5px 10px;
+}
+
+.bigger-block {
+    width: 410px;
+    height: 190px;
+    font-size: 24px;
+}
+
+.smaller-block {
+    width: 350px;
+    height: 130px;
+    font-size: 18px;
+}
+
+.money {
+    font-size: 36px;
+    margin: 20px 0 0 0;
+}
+
+.certificates-wrapper a::before,
+.certificates-wrapper a::after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+}
+
+.certificates-wrapper a::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #db0070;
+    border-left: 1px solid #db0070;
+    transition: all 100ms;
+}
+
+.certificates-wrapper a::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 1px solid #db0070;
+    border-right: 1px solid #db0070;
+    transition: all 100ms;
+}
+
+.certificates-wrapper a:hover::before {
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+
+}
+
+.certificates-wrapper a:hover::after {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+

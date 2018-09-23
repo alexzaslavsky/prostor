@@ -1,0 +1,45 @@
+.feedback-header {
+    font-weight: bolder;
+    color: #000;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 100px 0 30px 0;
+}
+
+.feedback-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 50px 0;
+}
+
+.client {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.client img {
+    margin: 15px;
+}
+
+.client p {
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.feedback-wrapper .commentary {
+    color: #767679;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.feedback-wrapper .commentary p {
+    text-align: center;
+}

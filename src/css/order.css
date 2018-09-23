@@ -1,0 +1,163 @@
+.order {
+    overflow: hidden;
+}
+
+.order-header {
+    font-weight: bolder;
+    color: #000;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 100px 0 30px 0;
+}
+
+.order-header h2 {
+    text-align: center;
+}
+
+.medium-certificates {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-certificates {
+    width: 540px;
+    height: 180px;
+    margin: 15px 0;
+}
+
+.left-top {
+    background: url("../img/top-left.png") no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity ease-in-out 1500ms;
+}
+
+.left-bottom {
+    background: url("../img/bot-left.png") no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity ease-in-out 1500ms;
+}
+
+.big-certificates {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-certificate {
+    width: 540px;
+    height: 390px;
+    margin: 15px 0;
+    background: url("../img/right-right.png") no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity ease-in-out 1500ms;
+}
+
+.small-certificates {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.bottom-certificates {
+    width: 540px;
+    height: 180px;
+}
+
+.first-bot-certificate {
+    background: url("../img/bottom-first.png") no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity ease-in-out 1500ms;
+}
+
+.second-bot-certificate {
+    background: url("../img/bottom-second.png") no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity ease-in-out 1500ms;
+}
+
+.third-bot-certificate {
+    background: url("../img/bottom-third.png") no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity ease-in-out 1500ms;
+}
+
+.order .button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px;
+}
+
+.order .button-wrapper button {
+    cursor: pointer;
+    width: 220px;
+    height: 55px;
+    border: 1px solid #db0070;
+    background: rgba(255, 255, 255, 1);
+    color: #db0070;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.right-certificate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-certificates {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-certificates {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bigger-block {
+    width: 410px;
+    height: 170px;
+}
+
+.smaller-block {
+    width: 290px;
+    height: 90px;
+}
+
+.smallest-block {
+    width: 260px;
+    height: 90px;
+}
+
+.order .transparent-block {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    font-weight: bolder;
+}
+
+.order .transparent-block p {
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px 0 10px 0;
+    position: relative;
+}

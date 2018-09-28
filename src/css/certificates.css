@@ -78,7 +78,7 @@
     margin-bottom: 69px;
 }
 
-.transparent-block {
+.certificates .transparent-block {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -87,7 +87,7 @@
     font-weight: bolder;
 }
 
-.transparent-block a {
+.certificates .transparent-block a {
     color: #db0070;
     text-decoration: none;
     font-size: 18px;
@@ -96,13 +96,13 @@
     padding: 5px 10px;
 }
 
-.bigger-block {
+.certificates .bigger-block {
     width: 410px;
     height: 190px;
     font-size: 24px;
 }
 
-.smaller-block {
+.certificates .smaller-block {
     width: 350px;
     height: 130px;
     font-size: 18px;

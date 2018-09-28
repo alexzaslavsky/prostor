@@ -11,12 +11,17 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Exo 2', sans-serif;*/
+    font-size: 1vw;
 }
+
+
 
 .main {
     min-height: 100vh;
     width: 100%;
     background: #f84e7f;
+    overflow: hidden;
     /*background: url("../img/main-bg-2.jpg") no-repeat center;*/
     /*background-size: cover;*/
 }
@@ -30,18 +35,88 @@ body {
     align-items: center;
 }
 
+.menu-wrapper {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+
+.menu-icon .strip {
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    top: 50%;
+    margin-top: -1px;
+    opacity: 1;
+    transition: transform 500ms, opacity 500ms;
+
+}
+
+.menu-icon .top-strip {
+    margin-top: -8px;
+}
+
+.menu-icon .bot-strip {
+    margin-top: 6px;
+}
+
+.menu-icon-active .top-strip {
+    transform: translateY(7px) rotateZ(45deg);
+    transform-origin: center center;
+}
+
+.menu-icon-active .bot-strip {
+    transform: translateY(-7px) rotateZ(-45deg);
+    transform-origin: center;
+}
+
+.menu-icon-active .top-mid-strip {
+    transform: translateX(-24px);
+    opacity: 0;
+}
+
+.menu-icon-active .bot-mid-strip {
+    transform: translateX(24px);
+    opacity: 0;
+}
+
+.menu-icon-active {
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    transition: border-color 500ms;
+}
+
 .logo-icon {
     width: 15px;
     height: 15px;
-    margin: 10px;
+    margin: 5px;
     background-color: var(--white);
     border-radius: 50%;
+}
+
+.logo-wrapper {
+    margin-bottom: 100px;
 }
 
 .logo-wrapper .logo-name {
     color: var(--white);
     font-weight: bolder;
     font-size: 22px;
+}
+
+.logo-wrapper .logo-paragraphs {
+    margin: 5px;
 }
 
 .logo-wrapper .logo-slogan {
@@ -51,18 +126,21 @@ body {
 
 .main-links {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 80px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    transition: all 1500ms;
 }
 
-.main-links a, .main-links p {
+
+
+.main-links a {
     color: var(--white);
-    font-weight: bolder;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 14px;
     text-decoration: none;
 }
 
@@ -72,6 +150,10 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
 }
 
 .hotline p {
@@ -79,13 +161,11 @@ body {
 }
 
 .slogan-wrapper {
-    height: 631px;
     position: relative;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    padding: 0 60px 0 60px;
 }
 
 .slogan-wrapper p {
@@ -93,7 +173,8 @@ body {
     color: var(--white);
     font-weight: bolder;
     text-transform: uppercase;
-    font-size: 38px;
+    font-size: 32px;
+    padding-left: 7%;
 }
 
 .face-glass {
@@ -102,16 +183,46 @@ body {
     align-items: center;
 }
 
-/*.vector-image img {*/
-    /*z-index: 0;*/
-    /*position: absolute;*/
-    /*left: 0;*/
-    /*top: 0;*/
-/*}*/
+.face-wrapper {
+    padding-top: 100%;
+    position: relative;
+}
 
-.vector-image {
-    background: url("../img/vector-paint.png") no-repeat center;
+.face-absolute-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("../img/face-glass.png") no-repeat center center;
     background-size: contain;
+}
+
+.vector-image-wrapper {
+    padding-top: 100%;
+    position: relative;
+}
+
+.vector-image-absolute-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("../img/vector-paint.png") no-repeat center center;
+    background-size: contain;
+    padding: 10%;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 5% 0;
 }
 
 .main button {

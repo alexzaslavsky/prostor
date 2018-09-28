@@ -1,10 +1,15 @@
 window.onload = function() {
 
+    document.querySelector(".menu-icon").onclick = function() {
+        this.classList.toggle('menu-icon-active');
+        document.querySelector(".main-links").classList.toggle('main-links-tablet');
+    };
+
     slide();
 
     window.onscroll = function() {
         slide();
-    }
+    };
 
     function slide() {
         var view = window.innerHeight - 100;

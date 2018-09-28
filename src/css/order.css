@@ -5,101 +5,108 @@
 .order-header {
     font-weight: bolder;
     color: #000;
-    font-size: 30px;
+    font-size: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 100px 0 30px 0;
+    padding: 6rem 0 2rem 0;
 }
 
 .order-header h2 {
     text-align: center;
 }
 
-.medium-certificates {
+.order .order-certificates {
+    position: relative;
+    padding-bottom: 100%;
+}
+
+.order-certificates-absolute-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
     display: flex;
     flex-flow: column nowrap;
+    align-items: stretch;
+}
+
+.order-certificate-itself {
+    width: 100%;
+    margin: 1em 0;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
 }
 
-.left-certificates {
-    width: 540px;
-    height: 180px;
-    margin: 15px 0;
-}
 
-.left-top {
-    background: url("../img/top-left.png") no-repeat center;
+.order .order-left-top {
+    background: url("../img/top-left.png") no-repeat left center;
     background-size: cover;
-    opacity: 0;
+    opacity: 1;
     transition: opacity ease-in-out 1500ms;
 }
 
-.left-bottom {
-    background: url("../img/bot-left.png") no-repeat center;
+.order .order-left-bottom {
+    background: url("../img/bot-left.png") no-repeat left center;
     background-size: cover;
-    opacity: 0;
+    opacity: 1;
     transition: opacity ease-in-out 1500ms;
 }
 
-.big-certificates {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.right-certificate {
-    width: 540px;
-    height: 390px;
-    margin: 15px 0;
+.order .order-big-right {
     background: url("../img/right-right.png") no-repeat center;
     background-size: cover;
-    opacity: 0;
+    opacity: 1;
     transition: opacity ease-in-out 1500ms;
 }
 
-.small-certificates {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    margin: 15px 0;
-}
-
-.bottom-certificates {
-    width: 540px;
-    height: 180px;
-}
-
-.first-bot-certificate {
-    background: url("../img/bottom-first.png") no-repeat center;
-    background-size: cover;
-    opacity: 0;
-    transition: opacity ease-in-out 1500ms;
-}
-
-.second-bot-certificate {
+.order .order-right-top {
     background: url("../img/bottom-second.png") no-repeat center;
     background-size: cover;
-    opacity: 0;
+    opacity: 1;
     transition: opacity ease-in-out 1500ms;
 }
 
-.third-bot-certificate {
+.order .order-right-bottom {
     background: url("../img/bottom-third.png") no-repeat center;
     background-size: cover;
-    opacity: 0;
+    opacity: 1;
     transition: opacity ease-in-out 1500ms;
+}
+
+.order .order-big-left {
+    background: url("../img/bottom-first.png") no-repeat center;
+    background-size: cover;
+    opacity: 1;
+    transition: opacity ease-in-out 1500ms;
+}
+
+.order .order-transparent-block {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    font-weight: bolder;
+}
+
+.order .order-transparent-block p {
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.5em;
+    padding: 1em;
+    font-size: 1.2em;
 }
 
 .order .button-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 80px;
+    margin: 50px 0;
 }
 
 .order .button-wrapper button {
@@ -113,51 +120,46 @@
     font-size: 16px;
 }
 
-.right-certificate {
+/*
+
+
+
+
+
+.order .right-certificate {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.left-certificates {
+.order .left-certificates {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.bottom-certificates {
+.order .bottom-certificates {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.bigger-block {
-    width: 410px;
-    height: 170px;
-}
 
-.smaller-block {
-    width: 290px;
-    height: 90px;
-}
-
-.smallest-block {
-    width: 260px;
-    height: 90px;
-}
-
-.order .transparent-block {
+.order .order-transparent-block {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     background: rgba(255, 255, 255, 0.8);
     font-weight: bolder;
+    width: 600px;
+    height:400px;
+    margin: 5em 1em;
 }
 
-.order .transparent-block p {
+.order .order-transparent-block p {
+    text-align: center;
     text-decoration: none;
-    font-size: 16px;
-    margin: 10px 0 10px 0;
-    position: relative;
+    margin: 10% 10%;
 }
+*/

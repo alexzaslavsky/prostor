@@ -1,0 +1,54 @@
+@media screen and (max-width: 991px) {
+    body {
+        font-size: 1.2vw;
+    }
+
+    .main-links-hidden {
+        display: none;
+    }
+
+    .hotline-hidden {
+        display: none;
+    }
+
+    .vector-image-wrapper {
+        padding-top: 50%;
+        position: relative;
+    }
+
+    .vector-image-absolute-wrapper {
+        padding: 0;
+        background: none;
+    }
+
+    .slogan-wrapper p {
+        text-align: center;
+        padding: 0;
+    }
+
+    .main-links {
+        position: absolute;
+        top: -100px;
+        margin-bottom: 0;
+        transition: all 1500ms;
+    }
+
+    .main-links-tablet {
+        position: absolute;
+        top: -100px;
+        transform: translateX(1000px);
+        margin-bottom: 0;
+        transition: all 1500ms;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .menu-column {
+        display: none;
+    }
+
+    .hotline-tablet {
+        display: none;
+    }
+}

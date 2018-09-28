@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
     <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
@@ -16,7 +17,19 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-lg-2">
+
+            <div class="col-md-1 menu-column">
+                <div class="menu-wrapper">
+                    <div class="menu-icon">
+                        <div class="strip top-strip"></div>
+                        <div class="strip top-mid-strip"></div>
+                        <div class="strip bot-mid-strip"></div>
+                        <div class="strip bot-strip"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 offset-md-3 col-lg-3 offset-lg-0">
                 <div class="logo-wrapper">
                     <div class="logo-icon">
 
@@ -27,37 +40,52 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 offset-lg-4">
-                <div class="main-links">
+
+            <div class="col-md-3 offset-md-1 hotline-tablet">
+                <div class="hotline">
+                    <p>Гаряча лінія</p>
+                    <p>0 800 600 200</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 offset-lg-3 col-md-12">
+                <div class="main-links main-links-tablet">
                     <a href="#">Про нас</a>
-                    <a href="">Бренди</a>
-                    <a href="">Міста та контакти</a>
-                    <a href="">Переваги</a>
-                    <div class="hotline">
+                    <a href="#">Бренди</a>
+                    <a href="#">Міста та контакти</a>
+                    <a href="#">Переваги</a>
+                    <div class="hotline hotline-hidden">
                         <p>Гаряча лінія</p>
                         <p>0 800 600 200</p>
                     </div>
                 </div>
             </div>
+
+
+
         </div>
 
         <div class="row">
             <div class="col-lg-6">
-                <div class="face-glass">
-                    <img draggable="false" src="img/face-glass.png" alt="face-glass">
+                <div class="face-wrapper">
+                    <div class="face-absolute-wrapper">
+                        <!--face-glass.png-->
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="vector-image">
-                    <!--<img src="img/vector-paint.png" alt="vector-paint">-->
-                    <div class="slogan-wrapper">
-                        <p>"Подарункові сертифікати prostor: подарунок будь-якого свята"</p>
-                        <div class="button-wrapper">
-                            <button>Дізнатися більше</button>
-                            <button class="transparent-button">Замовити</button>
+                <div class="vector-image-wrapper">
+                    <div class="vector-image-absolute-wrapper">
+                        <div class="slogan-wrapper">
+                            <p>"Подарункові сертифікати prostor: подарунок будь-якого свята"</p>
+                            <div class="button-wrapper">
+                                <button>Дізнатися більше</button>
+                                <button class="transparent-button">Замовити</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -224,7 +252,7 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 col-md-12">
                 <div class="order-header">
                     <h2>Подарункові сертифікати Prostor</h2>
                 </div>
@@ -232,28 +260,32 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-6">
-                <div class="medium-certificates">
-                    <div class="left-certificates left-top left-slide">
-                        <div class="smaller-block transparent-block">
-                            <p>Недорогі ціни</p>
-                            <p>на популярні бренди</p>
+            <div class="col-lg-6 col-md-6">
+                <div class="order-certificates">
+                    <div class="order-certificates-absolute-wrapper">
+                        <div class="order-certificate-itself order-left-top left-slide">
+                            <div class="order-smaller-block order-transparent-block">
+                                <p>Недорогі ціни<br>
+                                    на популярні бренди</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="left-certificates left-bottom left-slide">
-                        <div class="smaller-block transparent-block">
-                            <p>Недорогі ціни</p>
-                            <p>на популярні бренди</p>
+                        <div class="order-certificate-itself order-left-bottom left-slide">
+                            <div class="order-smaller-block order-transparent-block">
+                                <p>Недорогі ціни<br>
+                                    на популярні бренди</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="big-certificates">
-                    <div class="right-certificate right-slide">
-                        <div class="bigger-block transparent-block">
-                            <p>Магазини розташовані в містах</p>
-                            <p>Ми завжди біля Вашого дому</p>
+            <div class="col-lg-6 col-md-6">
+                <div class="order-certificates">
+                    <div class="order-certificates-absolute-wrapper">
+                        <div class="order-certificate-itself order-big-right right-slide">
+                            <div class="order-bigger-block order-transparent-block">
+                                <p>Магазини розташовані в містах<br>
+                                    Ми завжди біля Вашого дому</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -261,32 +293,32 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4">
-                <div class="small-certificates">
-                    <div class="bottom-certificates first-bot-certificate left-slide">
-                        <div class="smallest-block transparent-block">
-                            <p>Недорогі ціни</p>
-                            <p>на популярні бренди</p>
+            <div class="col-lg-6 col-md-6">
+                <div class="order-certificates">
+                    <div class="order-certificates-absolute-wrapper">
+                        <div class="order-certificate-itself order-big-left left-slide">
+                            <div class="order-bigger-block order-transparent-block">
+                                <p>Недорогі ціни<br>
+                                    на популярні бренди</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="small-certificates">
-                    <div class="bottom-certificates second-bot-certificate bottom-slide">
-                        <div class="smallest-block transparent-block">
-                            <p>Недорогі ціни</p>
-                            <p>на популярні бренди</p>
+            <div class="col-lg-6 col-md-6">
+                <div class="order-certificates">
+                    <div class="order-certificates-absolute-wrapper">
+                        <div class="order-certificate-itself order-right-top right-slide">
+                            <div class="order-smaller-block order-transparent-block">
+                                <p>Недорогі ціни<br>
+                                    на популярні бренди</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="small-certificates">
-                    <div class="bottom-certificates third-bot-certificate right-slide">
-                        <div class="smallest-block transparent-block">
-                            <p>Недорогі ціни</p>
-                            <p>на популярні бренди</p>
+                        <div class="order-certificate-itself order-right-bottom right-slide">
+                            <div class="order-smaller-block order-transparent-block">
+                                <p>Недорогі ціни<br>
+                                    на популярні бренди</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -318,7 +350,7 @@
             </div>
 
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6">
                 <div class="feedback-wrapper">
                     <div class="client">
                         <img src="img/client-image.png" alt="client image">
@@ -331,7 +363,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6">
                 <div class="feedback-wrapper">
                     <div class="client">
                         <img src="img/client-image.png" alt="client image">
@@ -344,7 +376,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6">
                 <div class="feedback-wrapper">
                     <div class="client">
                         <img src="img/client-image.png" alt="client image">
@@ -376,7 +408,7 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-2 offset-lg-1">
+            <div class="col-lg-2 offset-lg-1 col-md-2 offset-md-1">
                 <div class="gifts-wrapper">
                     <div class="image-block">
                         <img src="img/heart.png" alt="heart">
@@ -384,7 +416,7 @@
                     <p>Своїм коханим</p>
                 </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-2">
                 <div class="gifts-wrapper">
                     <div class="image-block">
                         <img src="img/family.png" alt="family">
@@ -392,7 +424,7 @@
                     <p>Рідним та близьким</p>
                 </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-2">
                 <div class="gifts-wrapper">
                     <div class="image-block">
                         <img src="img/colleague.png" alt="colleague">
@@ -400,7 +432,7 @@
                     <p>Колегам по роботі</p>
                 </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-2">
                 <div class="gifts-wrapper">
                     <div class="image-block">
                         <img src="img/briefcase.png" alt="briefcase">
@@ -408,7 +440,7 @@
                     <p>Бізнес-партнерам</p>
                 </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-2">
                 <div class="gifts-wrapper">
                     <div class="image-block">
                         <img src="img/heart_2.png" alt="heart">

@@ -248,6 +248,18 @@ body {
     color: #db0070;
 }
 
+.main .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    padding: 50px 0;
+}
+
+.main .arrow-wrapper img {
+    animation: downAnimation 3000ms infinite;
+}
+
 
 
 

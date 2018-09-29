@@ -40,6 +40,11 @@
         margin-bottom: 0;
         transition: all 1500ms;
     }
+
+    .main .arrow-wrapper {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 @media screen and (min-width: 992px) {

@@ -37,6 +37,24 @@ window.onload = function() {
                 elementsB[i].classList.add('bottom-animation');
             }
         }
+    };
+
+    // ---Ripple-effect on main links click---
+
+    var links = document.querySelectorAll('a');
+
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', createRipple);
     }
+
+    function createRipple(e) {
+        var circle = document.createElement('span');
+        this.appendChild(circle);
+
+        circle.style.left = e.clientX - this.getBoundingClientRect().left + 'px';
+        circle.style.top = e.clientY - this.getBoundingClientRect().top + 'px';
+
+        circle.classList.add("ripple");
+    };
 
 };

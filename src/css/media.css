@@ -45,6 +45,10 @@
         margin: 0;
         padding: 0;
     }
+    
+    .brands .md-disapper {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 992px) {

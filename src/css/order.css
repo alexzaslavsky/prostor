@@ -43,45 +43,45 @@
 }
 
 
-.order .order-left-top {
+.order-left-top {
     background: url("../img/top-left.png") no-repeat left center;
     background-size: cover;
-    opacity: 1;
+    opacity: 0;
     transition: opacity ease-in-out 1500ms;
 }
 
-.order .order-left-bottom {
+.order-left-bottom {
     background: url("../img/bot-left.png") no-repeat left center;
     background-size: cover;
-    opacity: 1;
+    opacity: 0;
     transition: opacity ease-in-out 1500ms;
 }
 
-.order .order-big-right {
+.order-big-right {
     background: url("../img/right-right.png") no-repeat center;
     background-size: cover;
-    opacity: 1;
+    opacity: 0;
     transition: opacity ease-in-out 1500ms;
 }
 
-.order .order-right-top {
+.order-right-top {
     background: url("../img/bottom-second.png") no-repeat center;
     background-size: cover;
-    opacity: 1;
+    opacity: 0;
     transition: opacity ease-in-out 1500ms;
 }
 
-.order .order-right-bottom {
+.order-right-bottom {
     background: url("../img/bottom-third.png") no-repeat center;
     background-size: cover;
-    opacity: 1;
+    opacity: 0;
     transition: opacity ease-in-out 1500ms;
 }
 
-.order .order-big-left {
+.order-big-left {
     background: url("../img/bottom-first.png") no-repeat center;
     background-size: cover;
-    opacity: 1;
+    opacity: 0;
     transition: opacity ease-in-out 1500ms;
 }
 
@@ -119,47 +119,3 @@
     font-weight: 600;
     font-size: 16px;
 }
-
-/*
-
-
-
-
-
-.order .right-certificate {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.order .left-certificates {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.order .bottom-certificates {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.order .order-transparent-block {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.8);
-    font-weight: bolder;
-    width: 600px;
-    height:400px;
-    margin: 5em 1em;
-}
-
-.order .order-transparent-block p {
-    text-align: center;
-    text-decoration: none;
-    margin: 10% 10%;
-}
-*/

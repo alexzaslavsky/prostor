@@ -50,7 +50,7 @@
         transform: translateY(30px);
     }
     75% {
-        opacity: 1;
+        opacity: 0;
         transform: translateY(30px);
     }
     100% {
@@ -64,10 +64,6 @@
         transform: translate(-50%, -50%) scale(0, 0);
         opacity: 1;
     }
-    /*50% {*/
-        /*transform: scale(2, 2);*/
-        /*opacity: 1;*/
-    /*}*/
     100% {
         transform: translate(-50%, -50%) scale(1, 1);
         opacity: 0;

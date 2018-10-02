@@ -1,13 +1,13 @@
-window.onload = function() {
+window.onload = function () {
 
-    document.querySelector(".menu-icon").onclick = function() {
+    document.querySelector(".menu-icon").onclick = function () {
         this.classList.toggle('menu-icon-active');
         document.querySelector(".main-links").classList.toggle('main-links-tablet');
     };
 
     slide();
 
-    window.onscroll = function() {
+    window.onscroll = function () {
         slide();
     };
 
@@ -57,4 +57,40 @@ window.onload = function() {
         circle.classList.add("ripple");
     };
 
+    // --- RADIO INPUTS FOR FEEDBACK ---
+
+
+    var clients = document.querySelectorAll('.client');
+    var inputsQuantity = Math.ceil(clients.length / 3);
+    var feedback = document.querySelector('.feedback-inputs');
+
+    for (var i = 0; i < inputsQuantity; i++) {
+        if (i === 0) {
+            feedback.insertAdjacentHTML('beforeEnd',
+                '<input type="radio" name="tabs" checked id="tab-' + (i + 1) + '"><label for="tab-' + (i + 1) + '"></label>')
+        }
+        else {
+            feedback.insertAdjacentHTML('beforeEnd',
+                '<input type="radio" name="tabs" id="tab-' + (i + 1) + '"><label for="tab-' + (i + 1) + '"></label>')
+        }
+    }
+
+    var inputs = document.querySelectorAll('.feedback-inputs>input');
+
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener('click', getFeedback);
+    }
+
+    function getFeedback() {
+        var id = this.getAttribute('id').replace('tab-', '');
+        var columns = document.querySelectorAll('.clients>.col-lg-4');
+        for (var i = 0; i < columns.length; i++) {
+            columns[i].style.display = 'none';
+        }
+        for (var i = id * 3 - 3; i < id * 3; i++) {
+            if (columns.length > i) {
+                columns[i].style.display = 'block';
+            }
+        }
+    }
 };

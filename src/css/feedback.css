@@ -43,3 +43,39 @@
 .feedback-wrapper .commentary p {
     text-align: center;
 }
+
+
+.feedback-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback-inputs > input {
+    display: none;
+}
+
+.feedback-inputs label {
+    display: block;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin: 50px 10px;
+    border: 1px solid #f84e7f;
+    border-radius: 50%;
+    transition: background-color 250ms;
+}
+
+.feedback-inputs input:checked + label {
+    background-color: #f84e7f;
+}
+
+.feedback-inputs label:hover {
+    background-color: #f84e7f;
+}
+
+.clients .col-lg-4:nth-child(n + 4) {
+    display: none;
+}
+
+

@@ -6,6 +6,8 @@ window.onload = function () {
     };
 
     slide();
+    getInputs();
+    addClickEventOnInputs();
 
     window.onscroll = function () {
         slide();
@@ -13,6 +15,8 @@ window.onload = function () {
 
     window.onresize = function() {
         getInputs();
+        addClickEventOnInputs();
+        getFeedbackOnResize();
     };
 
     function slide() {
@@ -88,16 +92,22 @@ window.onload = function () {
         }
     }
 
-    getInputs();
+    // getInputs();
+    // addClickEventOnInputs();
 
-    var inputs = document.querySelectorAll('.feedback-inputs>input');
+    function addClickEventOnInputs() {
 
-    for (var i = 0; i < inputs.length; i++) {
-        inputs[i].addEventListener('click', getFeedback);
+        var inputs = document.querySelectorAll('.feedback-inputs>input');
+
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('click', getFeedback);
+        }
+
     }
 
     function getFeedback() {
-        var id = this.getAttribute('id').replace('tab-', '');
+        debugger;
+        var id = this.getAttribute('id').replace('tab-', '') || 1;
         if (window.innerWidth >= 992) {
             var columns = document.querySelectorAll('.clients>.col-lg-4');
             for (var i = 0; i < columns.length; i++) {
@@ -114,6 +124,55 @@ window.onload = function () {
             for (var i = 0; i < columns.length; i++) {
                 columns[i].style.display = 'none';
             }
+            for (var i = id * 2 - 2; i < id * 2; i++) {
+                if (columns.length > i) {
+                    columns[i].style.display = 'block';
+                }
+            }
+        }
+    }
+
+    function getFeedbackOnResize() {
+        debugger;
+        var id = 1;
+        if (window.innerWidth >= 992) {
+            var columns = document.querySelectorAll('.clients>.col-lg-4');
+
+            for (var i = 0; i < columns.length; i++) {
+                if (columns[i].style.display === 'block') {
+                   id = Math.ceil((i + 1) / 3);
+                   var tab = '#tab-' + id;
+                   document.querySelector(tab).setAttribute('checked', '');
+                   break;
+                }
+            }
+
+            for (var i = 0; i < columns.length; i++) {
+                columns[i].style.display = 'none';
+            }
+
+            for (var i = id * 3 - 3; i < id * 3; i++) {
+                if (columns.length > i) {
+                    columns[i].style.display = 'block';
+                }
+            }
+        }
+        else if (window.innerWidth < 992) {
+            var columns = document.querySelectorAll('.clients>.col-md-6');
+
+            for (var i = 0; i < columns.length; i++) {
+                if (columns[i].style.display === 'block') {
+                    id = Math.ceil((i + 1) / 2);
+                    var tab = '#tab-' + id;
+                    document.querySelector(tab).setAttribute('checked', '');
+                    break;
+                }
+            }
+
+            for (var i = 0; i < columns.length; i++) {
+                columns[i].style.display = 'none';
+            }
+
             for (var i = id * 2 - 2; i < id * 2; i++) {
                 if (columns.length > i) {
                     columns[i].style.display = 'block';

@@ -59,9 +59,13 @@ window.onload = function () {
 
     // --- RADIO INPUTS FOR FEEDBACK ---
 
-
     var clients = document.querySelectorAll('.client');
-    var inputsQuantity = Math.ceil(clients.length / 3);
+    if (window.innerWidth >= 992) {
+        var inputsQuantity = Math.ceil(clients.length / 3);
+    }
+    else if (window.innerWidth < 992) {
+        var inputsQuantity = Math.ceil(clients.length / 2);
+    }
     var feedback = document.querySelector('.feedback-inputs');
 
     for (var i = 0; i < inputsQuantity; i++) {
@@ -83,13 +87,26 @@ window.onload = function () {
 
     function getFeedback() {
         var id = this.getAttribute('id').replace('tab-', '');
-        var columns = document.querySelectorAll('.clients>.col-lg-4');
-        for (var i = 0; i < columns.length; i++) {
-            columns[i].style.display = 'none';
+        if (window.innerWidth >= 992) {
+            var columns = document.querySelectorAll('.clients>.col-lg-4');
+            for (var i = 0; i < columns.length; i++) {
+                columns[i].style.display = 'none';
+            }
+            for (var i = id * 3 - 3; i < id * 3; i++) {
+                if (columns.length > i) {
+                    columns[i].style.display = 'block';
+                }
+            }
         }
-        for (var i = id * 3 - 3; i < id * 3; i++) {
-            if (columns.length > i) {
-                columns[i].style.display = 'block';
+        else if (window.innerWidth < 992) {
+            var columns = document.querySelectorAll('.clients>.col-md-6');
+            for (var i = 0; i < columns.length; i++) {
+                columns[i].style.display = 'none';
+            }
+            for (var i = id * 2 - 2; i < id * 2; i++) {
+                if (columns.length > i) {
+                    columns[i].style.display = 'block';
+                }
             }
         }
     }

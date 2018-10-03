@@ -11,6 +11,10 @@ window.onload = function () {
         slide();
     };
 
+    window.onresize = function() {
+        getInputs();
+    };
+
     function slide() {
         var view = window.innerHeight - 100;
 
@@ -59,25 +63,32 @@ window.onload = function () {
 
     // --- RADIO INPUTS FOR FEEDBACK ---
 
-    var clients = document.querySelectorAll('.client');
-    if (window.innerWidth >= 992) {
-        var inputsQuantity = Math.ceil(clients.length / 3);
-    }
-    else if (window.innerWidth < 992) {
-        var inputsQuantity = Math.ceil(clients.length / 2);
-    }
-    var feedback = document.querySelector('.feedback-inputs');
+    function getInputs() {
+        var clients = document.querySelectorAll('.client');
+        var inputsQuantity = 0;
+        if (window.innerWidth >= 992) {
+            inputsQuantity = Math.ceil(clients.length / 3);
+        }
+        else if (window.innerWidth < 992) {
+            inputsQuantity = Math.ceil(clients.length / 2);
+        }
+        var feedback = document.querySelector('.feedback-inputs');
 
-    for (var i = 0; i < inputsQuantity; i++) {
-        if (i === 0) {
-            feedback.insertAdjacentHTML('beforeEnd',
-                '<input type="radio" name="tabs" checked id="tab-' + (i + 1) + '"><label for="tab-' + (i + 1) + '"></label>')
-        }
-        else {
-            feedback.insertAdjacentHTML('beforeEnd',
-                '<input type="radio" name="tabs" id="tab-' + (i + 1) + '"><label for="tab-' + (i + 1) + '"></label>')
+        feedback.innerHTML = '';
+
+        for (var i = 0; i < inputsQuantity; i++) {
+            if (i === 0) {
+                feedback.insertAdjacentHTML('beforeEnd',
+                    '<input type="radio" name="tabs" checked id="tab-' + (i + 1) + '"><label for="tab-' + (i + 1) + '"></label>')
+            }
+            else {
+                feedback.insertAdjacentHTML('beforeEnd',
+                    '<input type="radio" name="tabs" id="tab-' + (i + 1) + '"><label for="tab-' + (i + 1) + '"></label>')
+            }
         }
     }
+
+    getInputs();
 
     var inputs = document.querySelectorAll('.feedback-inputs>input');
 

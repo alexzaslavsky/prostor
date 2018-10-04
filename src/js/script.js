@@ -103,7 +103,6 @@ window.onload = function () {
     }
 
     function getFeedback() {
-        debugger;
         const id = this.getAttribute('id').replace('tab-', '') || 1;
         if (window.innerWidth >= 992) {
             const columns = document.querySelectorAll('.clients>.col-lg-4');
@@ -113,11 +112,11 @@ window.onload = function () {
                 columns[i].style.animation = "feedback-animation-disappear 500ms forwards "
                     + timeoutDisAppear * 100 + "ms";
                 timeoutDisAppear = timeoutDisAppear + 2;
-                if ((timeoutDisAppear % 3 === 0) && i !== 0) {
+                if ((timeoutDisAppear % 6 === 0) && i !== 0) {
                     timeoutDisAppear = 0;
                 }
             }
-            setTimeout(function () {
+            setTimeout(function() {
                 for (let i = 0; i < columns.length; i++) {
                     columns[i].style.display = 'none';
 
@@ -134,18 +133,35 @@ window.onload = function () {
                 }
             }, 900);
 
-
         }
         else if (window.innerWidth < 992) {
             const columns = document.querySelectorAll('.clients>.col-md-6');
+            let timeoutDisAppear = 0;
             for (let i = 0; i < columns.length; i++) {
-                columns[i].style.display = 'none';
-            }
-            for (let i = id * 2 - 2; i < id * 2; i++) {
-                if (columns.length > i) {
-                    columns[i].style.display = 'block';
+                columns[i].style.opacity = '1';
+                columns[i].style.animation = "feedback-animation-disappear 500ms forwards "
+                    + timeoutDisAppear * 100 + "ms";
+                timeoutDisAppear = timeoutDisAppear + 2;
+                if ((timeoutDisAppear % 4 === 0) && i !== 0) {
+                    timeoutDisAppear = 0;
                 }
             }
+            setTimeout(function() {
+                for (let i = 0; i < columns.length; i++) {
+                    columns[i].style.display = 'none';
+
+                }
+                let timeoutAppear = 1;
+                for (let i = id * 2 - 2; i < id * 2; i++) {
+                    if (columns.length > i) {
+                        columns[i].style.opacity = '0';
+                        columns[i].style.animation = "feedback-animation-appear 500ms forwards "
+                            + timeoutAppear * 100 + "ms";
+                        columns[i].style.display = 'block';
+                        timeoutAppear = timeoutAppear + 2;
+                    }
+                }
+            }, 700);
         }
     }
 

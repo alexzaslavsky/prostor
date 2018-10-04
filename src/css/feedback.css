@@ -74,8 +74,8 @@
     background-color: #f84e7f;
 }
 
-.clients .col-lg-4:nth-child(n + 4) {
-    display: none;
+.feedback .clients {
+    overflow: hidden;
 }
 
 

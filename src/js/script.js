@@ -134,6 +134,7 @@ window.onload = function () {
                 }
             }, 900);
 
+            
         }
         else if (window.innerWidth < 992) {
             const columns = document.querySelectorAll('.clients>.col-md-6');

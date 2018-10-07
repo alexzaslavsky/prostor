@@ -47,7 +47,7 @@ window.onload = function () {
         }
     }
 
-    // ---Ripple-effect on main links click---
+// ---Ripple-effect on main links click---
 
     const links = document.querySelectorAll('a');
 
@@ -65,7 +65,7 @@ window.onload = function () {
         circle.classList.add("ripple");
     }
 
-    // --- RADIO INPUTS FOR FEEDBACK ---
+// --- RADIO INPUTS FOR FEEDBACK ---
 
     function getInputs() {
         const clients = document.querySelectorAll('.client');
@@ -106,29 +106,38 @@ window.onload = function () {
         const id = this.getAttribute('id').replace('tab-', '') || 1;
         if (window.innerWidth >= 992) {
             const columns = document.querySelectorAll('.clients>.col-lg-4');
+
+/*устанавливаем счетчик задержки для первого исчезающего элемента
+* а в цикле добавляем по 200мс за проход, но когда он достигает 600мс
+* то сбрасываем на ноль*/
+
             let timeoutDisAppear = 0;
+
             for (let i = 0; i < columns.length; i++) {
                 columns[i].style.opacity = '1';
                 columns[i].style.animation = "feedback-animation-disappear 500ms forwards "
-                    + timeoutDisAppear * 100 + "ms";
-                timeoutDisAppear = timeoutDisAppear + 2;
-                if ((timeoutDisAppear % 6 === 0) && i !== 0) {
+                    + timeoutDisAppear + "ms";
+                timeoutDisAppear = timeoutDisAppear + 200;
+                if ((timeoutDisAppear % 600 === 0) && i !== 0) {
                     timeoutDisAppear = 0;
                 }
             }
+
+/*ожидаем завершение анимации по исчезновению отзывов
+* и запускаем появление новых отзывов*/
+
             setTimeout(function() {
                 for (let i = 0; i < columns.length; i++) {
                     columns[i].style.display = 'none';
-
                 }
-                let timeoutAppear = 1;
+                let timeoutAppear = 100;
                 for (let i = id * 3 - 3; i < id * 3; i++) {
                     if (columns.length > i) {
                         columns[i].style.opacity = '0';
                         columns[i].style.animation = "feedback-animation-appear 500ms forwards "
-                            + timeoutAppear * 100 + "ms";
+                            + timeoutAppear + "ms";
                         columns[i].style.display = 'block';
-                        timeoutAppear = timeoutAppear + 2;
+                        timeoutAppear = timeoutAppear + 200;
                     }
                 }
             }, 900);
@@ -136,13 +145,19 @@ window.onload = function () {
         }
         else if (window.innerWidth < 992) {
             const columns = document.querySelectorAll('.clients>.col-md-6');
+
+/*устанавливаем счетчик задержки для первого исчезающего элемента
+* а в цикле добавляем по 200мс за проход, но когда он достигает 600мс
+* то сбрасываем на ноль*/
+
             let timeoutDisAppear = 0;
+
             for (let i = 0; i < columns.length; i++) {
                 columns[i].style.opacity = '1';
                 columns[i].style.animation = "feedback-animation-disappear 500ms forwards "
-                    + timeoutDisAppear * 100 + "ms";
-                timeoutDisAppear = timeoutDisAppear + 2;
-                if ((timeoutDisAppear % 4 === 0) && i !== 0) {
+                    + timeoutDisAppear + "ms";
+                timeoutDisAppear = timeoutDisAppear + 200;
+                if ((timeoutDisAppear % 400 === 0) && i !== 0) {
                     timeoutDisAppear = 0;
                 }
             }
@@ -151,14 +166,14 @@ window.onload = function () {
                     columns[i].style.display = 'none';
 
                 }
-                let timeoutAppear = 1;
+                let timeoutAppear = 100;
                 for (let i = id * 2 - 2; i < id * 2; i++) {
                     if (columns.length > i) {
                         columns[i].style.opacity = '0';
                         columns[i].style.animation = "feedback-animation-appear 500ms forwards "
-                            + timeoutAppear * 100 + "ms";
+                            + timeoutAppear + "ms";
                         columns[i].style.display = 'block';
-                        timeoutAppear = timeoutAppear + 2;
+                        timeoutAppear = timeoutAppear + 200;
                     }
                 }
             }, 700);
@@ -210,6 +225,38 @@ window.onload = function () {
                     columns[i].style.display = 'block';
                 }
             }
+        }
+    }
+
+/*Плавный скролл к якорным ссылкам
+* в переменную smoothLinks добавляем все ссылки на странице,
+* которые не заканчиваются на диез "#" */
+
+    let smoothlinks = document.querySelectorAll('.main-links>a:not([href$="#"])');
+    console.log(smoothlinks);
+
+    let distance = 0;
+
+    for (let i = 0; i < smoothlinks.length; i++) {
+        smoothlinks[i].onclick = function (event) {
+            event.preventDefault();
+            distance = document.querySelector(this.hash).getBoundingClientRect().top;
+            smoothScroll(event, distance);
+        }
+    }
+
+    let grow = 1;
+    function smoothScroll() {
+        let timer;
+        if (grow <= distance) {
+            window.scrollTo(0, grow);
+            grow += 7;
+            timer = setTimeout(smoothScroll, 1);
+        }
+        else {
+            clearTimeout(timer);
+            window.scrollTo(0, distance);
+            grow = 0;
         }
     }
 };
